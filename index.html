@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gdube">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gabriel is currently a student in the Mobile Application Design &amp; Development program at Algonquin College. He is currently seeking an intern or junior level position where he can learn, apply and further improve on his current skill set." />
+	<meta name="keywords" content="web developer, mobile developer, app developer, Web Developer Ottawa, Web Development, Gabriel Dubé, application developer, ottawa developer" />
+	<title>Gabriel Dubé &#45; Web &amp; Mobile Application Developer &#124; Ottawa, Ontario, Canada</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<nav ng-controller="NavController">
+		<div class="left">
+			<a href="/">
+				<img src="img/Logo-small.png" class="logo" alt="Gabriel Dubé's official logo">
+				<p>Gabriel Dubé</p>
+			</a>
+		</div>
+
+		<div class="right">
+			<ul class="page-links">
+				<li><a ng-class="getClass('/home')" href="#/home">Home</a></li>
+				<li><a ng-class="getClass('/about')" href="#/about">About</a></li>
+				<li><a href="assets/Gabriel-Dub%C3%A9-R%C3%A9sum%C3%A9.pdf" target="_blank">Résumé</a></li>
+				<li><a ng-class="getClass('/contact')" href="#/contact">Contact</a></li>
+			</ul>
+
+			<ul class="social-links">
+				<li><a href="https://github.com/dube0141" target="_blank" title="GitHub"><i class="fa fa-github fa-2x"></i></a></li>
+				<li><a href="http://codepen.io/gdube/" target="_blank" title="CodePen"><i class="fa fa-codepen fa-2x"></i></a></li>
+				<li><a href="https://ca.linkedin.com/in/gabriel-dubé-7605639b
+" target="_blank" title="LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div ui-view class="animated fadeIn"></div>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
