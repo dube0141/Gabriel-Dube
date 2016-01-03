@@ -408,4 +408,7 @@ Modified by: Gabriel Dubé
 	nav p {
 		display: none;
 	}
+	header {
+		padding: 100px 20px;
+	}
 }
