@@ -10,10 +10,19 @@
 	a.src = g;
 	m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', 'UA-52206427-8', 'auto');
+ga('create', 'UA-52206427-8', 'none');
 //
 
-angular.module('gdube', ["ui.router", 'angulartics', 'angulartics.google.analytics'])
+//Fix for clients with adblock or ublock services
+var dependencies = ["ui.router", "angulartics", "angulartics.google.analytics"];
+try {
+	angular.module("angulartics.google.analytics");
+} catch (err) {
+	dependencies = ["ui.router"];
+}
+
+//Angular App
+angular.module('gdube', dependencies)
 
 .config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
